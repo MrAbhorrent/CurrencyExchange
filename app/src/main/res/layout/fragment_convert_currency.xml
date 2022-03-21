@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.main.ConvertCurrencyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTitleConvertCurrency"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/stdMarginTopContainer"
+        android:layout_marginBottom="@dimen/stdMarginBottomContainer"
+        android:textSize="@dimen/TextSizeTitle"
+        />
+
+    <EditText
+        android:id="@+id/edtValueCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите сумму для конвертации"
+        android:textAlignment="center"
+        android:textSize="@dimen/TextSizeInputCurrency"
+        android:inputType="number"
+        android:paddingStart="@dimen/minimalPadding"
+        android:paddingEnd="@dimen/minimalPadding"
+        />
+
+    <Button
+        android:id="@+id/btnCalculateExchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/stdMarginTopContainer"
+        android:layout_marginBottom="@dimen/stdMarginBottomContainer"
+        android:layout_marginStart="@dimen/stdButtonMarginStart"
+        android:layout_marginEnd="@dimen/stdButtonMarginEnd"
+        android:text="Рассчитать"
+        />
+
+    <TextView
+        android:id="@+id/tvTextCalculateExchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        tools:text="1000 драхмов"
+        android:textSize="@dimen/TextSizeInputCurrency"
+        />
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/minimalPadding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/minimalPadding"
+            android:paddingStart="@dimen/minimalPadding"
+            android:paddingEnd="@dimen/minimalPadding"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/tvTitleCurrencyCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Код\nвалюты"
+                android:paddingEnd="@dimen/minimalPadding"/>
+
+            <TextView
+                android:id="@+id/tvTitleCurrencyName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Наименование валюты"
+                android:paddingEnd="@dimen/minimalPadding"/>
+            <TextView
+                android:id="@+id/tvTitleCurrencyValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Курс конвертации"
+                android:paddingEnd="@dimen/minimalPadding"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMainScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="10"
+            tools:listitem="@layout/main_item" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_update"
+        android:src="@drawable/ic_baseline_refresh_24"
+        android:layout_margin="@dimen/minimalPadding"
+        app:maxImageSize="30dp"
+        android:tintMode="add"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        tools:visibility="gone"
+        android:id="@+id/onLoadingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdMarginTopContainer"
+            android:textSize="@dimen/textSizeHeader"
+            android:textStyle="bold"
+            android:text="@string/textStateLoading"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</FrameLayout>

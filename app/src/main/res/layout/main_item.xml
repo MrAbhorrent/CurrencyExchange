@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/minimalPadding">
+
+    <TextView
+        android:id="@+id/tvCurrencyCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="AUD"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/stdMarginRecyclerView"
+        />
+
+    <TextView
+        android:id="@+id/tvCurrencyName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:textAlignment="textStart"
+        tools:text="Австралийский доллар"
+        />
+
+    <TextView
+        android:id="@+id/tvCurrencyValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:textAlignment="center"
+        tools:text="Курс конвертации"
+        android:paddingEnd="@dimen/minimalPadding"/>
+
+</LinearLayout>
